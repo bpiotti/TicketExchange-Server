@@ -7,19 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c1c6093-df15-42ed-83f8-267d814a119c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Entity/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cs252.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cs252.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/rest/RestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/rest/RestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/rest/RestService$Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/rest/RestService$Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/rest/RestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/rest/RestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cs252.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/cs252.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/cs252/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/rest/RestService$Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/rest/RestService$Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/rest/RestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/rest/RestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,8 +49,8 @@
       <file leaf-file-name="LoginDao.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+            <state relative-caret-position="466">
+              <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -185,8 +178,8 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1440" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="873" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -519,21 +512,21 @@
       <updated>1554990593160</updated>
       <workItem from="1554990594590" duration="19343000" />
       <workItem from="1555438639546" duration="508000" />
-      <workItem from="1555462145284" duration="2154000" />
+      <workItem from="1555462145284" duration="3829000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22005000" />
+    <option name="totallyTimeSpent" value="23680000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="1440" y="23" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3298969" />
-      <window_info active="true" anchor="right" id="Maven Projects" order="3" visible="true" weight="0.14323749" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.14323749" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -549,7 +542,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27395833" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28451884" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17199148" />
       <window_info anchor="right" id="Bean Validation" order="3" />
@@ -888,8 +881,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="30" column="37" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        <state relative-caret-position="466">
+          <caret line="57" column="60" selection-start-line="57" selection-start-column="60" selection-end-line="57" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -33,10 +33,31 @@ public class LoginDao {
             if (rs.next() == false) {
                 //Nothing returned from database, create an account
                 log.debug("EMAIL NOT FOUND");
+                String update  = "INSERT INTO auth (email, password) VALUES (?, ?);";
+                stmt = con.prepareStatement(update);
+                stmt.setString(1, login.getEmail());
+                stmt.setString(2, login.getPassword());
+                stmt.executeUpdate();
+
+                return Response
+                        .status(Response.Status.OK)
+                        .build();
             }
             else {
                 //Check if password is right
                 log.debug("EMAIL FOUND");
+                if (login.getPassword().equals(rs.getString("password"))) {
+                    log.debug("password is correct");
+                    return Response
+                            .status(Response.Status.OK)
+                            .build();
+                }
+                else {
+                    log.debug("password is incorrect");
+                    return Response
+                            .status(Response.Status.CONFLICT)
+                            .build();
+                }
             }
 
         }
