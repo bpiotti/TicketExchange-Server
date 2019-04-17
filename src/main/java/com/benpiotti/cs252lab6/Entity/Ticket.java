@@ -7,15 +7,16 @@ public class Ticket {
     private String sellerfirst;
     private String sellerlast;
     private double price;
-    private Date date;
+    private String date;
     private boolean sold;
-    private Date gametime;
+    private String gametime;
     private String buyerFirst;
     private String buyerLast;
     private String event;
     private String description;
+    private String email;
 
-    public Ticket(int ticketid, String sellerfirst, String sellerlast, double price, Date date, boolean sold, Date gametime, String buyerFirst, String buyerLast, String event, String description) {
+    public Ticket(int ticketid, String sellerfirst, String sellerlast, double price, String date, boolean sold, String gametime, String buyerFirst, String buyerLast, String event, String description, String email) {
         this.ticketid = ticketid;
         this.sellerfirst = sellerfirst;
         this.sellerlast = sellerlast;
@@ -27,10 +28,19 @@ public class Ticket {
         this.buyerLast = buyerLast;
         this.event = event;
         this.description = description;
+        this.email = email;
     }
 
     public Ticket() {
 
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getDescription() {
@@ -73,11 +83,11 @@ public class Ticket {
         this.price = price;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -89,11 +99,11 @@ public class Ticket {
         this.sold = sold;
     }
 
-    public Date getGametime() {
+    public String getGametime() {
         return gametime;
     }
 
-    public void setGametime(Date gametime) {
+    public void setGametime(String gametime) {
         this.gametime = gametime;
     }
 
