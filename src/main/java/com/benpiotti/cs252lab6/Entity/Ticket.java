@@ -13,8 +13,9 @@ public class Ticket {
     private String buyerFirst;
     private String buyerLast;
     private String event;
+    private String description;
 
-    public Ticket(int ticketid, String sellerfirst, String sellerlast, double price, Date date, boolean sold, Date gametime, String buyerFirst, String buyerLast, String event) {
+    public Ticket(int ticketid, String sellerfirst, String sellerlast, double price, Date date, boolean sold, Date gametime, String buyerFirst, String buyerLast, String event, String description) {
         this.ticketid = ticketid;
         this.sellerfirst = sellerfirst;
         this.sellerlast = sellerlast;
@@ -25,10 +26,19 @@ public class Ticket {
         this.buyerFirst = buyerFirst;
         this.buyerLast = buyerLast;
         this.event = event;
+        this.description = description;
     }
 
     public Ticket() {
 
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getTicketid() {

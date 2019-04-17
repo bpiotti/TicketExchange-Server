@@ -41,7 +41,7 @@ public class TicketDao {
         finally {
             closeAll(rs, stmt, con);
         }
-
+        log.info("exit /getAllTickets");
         return tickets;
     }
 }
