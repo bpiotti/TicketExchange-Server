@@ -1,5 +1,7 @@
 package com.benpiotti.cs252lab6.rest;
 
+import com.benpiotti.cs252lab6.Dao.LoginDao;
+import com.benpiotti.cs252lab6.Entity.Login;
 import com.benpiotti.cs252lab6.util.Database;
 import com.benpiotti.cs252lab6.util.Database.*;
 import java.sql.Connection;
@@ -8,6 +10,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.benpiotti.cs252lab6.Entity.Ticket;
@@ -81,5 +85,14 @@ public class RestService {
 
         log.info("Exit: /test");
         return ticket;
+    }
+
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("login")
+    public Response login(Login login) {
+        log.info("Enter: /test");
+        LoginDao loginDao = new LoginDao();
+        return loginDao.login(login);
     }
 }
