@@ -6,14 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c1c6093-df15-42ed-83f8-267d814a119c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cs252.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/cs252.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cs252/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/cs252/WEB-INF/classes/com/benpiotti/cs252lab6/Dao/LoginDao.class" afterDir="false" />
-    </list>
+    <list default="true" id="7c1c6093-df15-42ed-83f8-267d814a119c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -512,12 +505,12 @@
       <updated>1554990593160</updated>
       <workItem from="1554990594590" duration="19343000" />
       <workItem from="1555438639546" duration="508000" />
-      <workItem from="1555462145284" duration="3829000" />
+      <workItem from="1555462145284" duration="3933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23680000" />
+    <option name="totallyTimeSpent" value="23784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="1920" height="1053" extended-state="6" />
