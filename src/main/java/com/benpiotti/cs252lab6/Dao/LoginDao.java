@@ -55,8 +55,11 @@ public class LoginDao {
                 }
                 else {
                     log.debug("password is incorrect");
+                    String message = "{\"password\": \"false\"}";
                     return Response
-                            .status(Response.Status.CONFLICT)
+                            .status(Response.Status.OK)
+                            .entity(message)
+                            .type(MediaType.APPLICATION_JSON)
                             .build();
                 }
             }
