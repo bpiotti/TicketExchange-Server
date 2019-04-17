@@ -88,10 +88,11 @@ public class RestService {
     }
 
     @POST
+    @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("login")
     public Response login(Login login) {
-        log.info("Enter: /test");
+        log.info("Enter: /login");
         LoginDao loginDao = new LoginDao();
         return loginDao.login(login);
     }

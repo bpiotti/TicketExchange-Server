@@ -1,6 +1,7 @@
 /Users/benpiotti/IdeaProjects/cs252/src/main/java/com/benpiotti/cs252lab6/Dao/TicketDao.java
 /Users/benpiotti/IdeaProjects/cs252/src/main/java/com/benpiotti/cs252lab6/servlet/InitServlet.java
 /Users/benpiotti/IdeaProjects/cs252/src/main/java/com/benpiotti/cs252lab6/util/Config.java
+/Users/benpiotti/IdeaProjects/cs252/src/main/java/com/benpiotti/cs252lab6/Filter/CORSFilter.java
 /Users/benpiotti/IdeaProjects/cs252/src/main/java/com/benpiotti/cs252lab6/util/Database.java
 /Users/benpiotti/IdeaProjects/cs252/src/main/java/com/benpiotti/cs252lab6/Dao/LoginDao.java
 /Users/benpiotti/IdeaProjects/cs252/src/main/java/com/benpiotti/cs252lab6/Entity/Ticket.java
