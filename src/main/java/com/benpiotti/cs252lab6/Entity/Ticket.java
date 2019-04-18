@@ -15,8 +15,10 @@ public class Ticket {
     private String event;
     private String description;
     private String email;
+    private String phone;
 
-    public Ticket(int ticketid, String sellerfirst, String sellerlast, double price, String date, boolean sold, String gametime, String buyerFirst, String buyerLast, String event, String description, String email) {
+    public Ticket(int ticketid, String sellerfirst, String sellerlast, double price, String date, boolean sold, String gametime, String buyerFirst,
+                  String buyerLast, String event, String description, String email, String phone) {
         this.ticketid = ticketid;
         this.sellerfirst = sellerfirst;
         this.sellerlast = sellerlast;
@@ -29,10 +31,19 @@ public class Ticket {
         this.event = event;
         this.description = description;
         this.email = email;
+        this.phone = phone;
     }
 
     public Ticket() {
 
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getEmail() {

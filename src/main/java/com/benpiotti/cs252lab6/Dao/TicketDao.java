@@ -17,7 +17,7 @@ public class TicketDao {
 
     //get array list of all tickets
     public ArrayList<Ticket> getAllTickets() {
-        String query = "select * from ticket order by date DESC";
+        String query = "select * from ticket where sold = false order by date DESC";
         Connection con = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
@@ -32,7 +32,7 @@ public class TicketDao {
                         rs.getString("sellerlast"), rs.getDouble("price"), rs.getString("date"),
                         rs.getBoolean("sold"), rs.getString("gametime"),
                         rs.getString("buyerfirst"), rs.getString("buyerlast"),
-                        rs.getString("event"), rs.getString("description"), rs.getString("email")));
+                        rs.getString("event"), rs.getString("description"), rs.getString("email"), rs.getString("phone")));
             }
 
         } catch (Exception e) {
