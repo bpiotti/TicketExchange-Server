@@ -141,4 +141,23 @@ public class Ticket {
     public void setEvent(String event) {
         this.event = event;
     }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "ticketid=" + ticketid +
+                ", sellerfirst='" + sellerfirst + '\'' +
+                ", sellerlast='" + sellerlast + '\'' +
+                ", price=" + price +
+                ", date='" + date + '\'' +
+                ", sold=" + sold +
+                ", gametime='" + gametime + '\'' +
+                ", buyerFirst='" + buyerFirst + '\'' +
+                ", buyerLast='" + buyerLast + '\'' +
+                ", event='" + event + '\'' +
+                ", description='" + description + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
 }

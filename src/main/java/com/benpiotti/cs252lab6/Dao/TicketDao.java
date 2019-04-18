@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import static com.benpiotti.cs252lab6.util.Database.closeAll;
 import com.benpiotti.cs252lab6.util.Database;
 
+import javax.ws.rs.core.Response;
+
 public class TicketDao {
 
     private static final Logger log = LoggerFactory.getLogger(TicketDao.class);
@@ -72,7 +74,61 @@ public class TicketDao {
         finally {
             closeAll(rs, stmt, con);
         }
-        log.info("exit /getAllTickets");
+        log.info("exit /getAllTicketsSort");
         return tickets;
+    }
+
+    //Add ticket resource to data base
+    public Response addTicket(Ticket ticket) {
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            String query = "SELECT COUNT(*) FROM ticket;";
+            con = Database.getConnection(DATABASE);
+            stmt = con.prepareStatement(query);
+            rs = stmt.executeQuery();
+            rs.next();
+            ticket.setTicketid(rs.getInt("count") + 1);
+
+            query = "INSERT INTO ticket\n" +
+                    "\t(ticketid, sellerfirst, sellerlast, price, \"date\", sold, gametime, buyerfirst, buyerlast, event, description, email, phone)\n" +
+                    "VALUES \n" +
+                    "\t(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            stmt = con.prepareStatement(query);
+
+            stmt.setInt(1, ticket.getTicketid());
+            stmt.setString(2, ticket.getSellerfirst());
+            stmt.setString(3, ticket.getSellerlast());
+            stmt.setDouble(4, ticket.getPrice());
+            stmt.setString(5, ticket.getDate());
+            stmt.setBoolean(6, ticket.isSold());
+            stmt.setString(7, ticket.getGametime());
+            stmt.setString(8, ticket.getBuyerFirst());
+            stmt.setString(9, ticket.getBuyerLast());
+            stmt.setString(10, ticket.getEvent());
+            stmt.setString(11, ticket.getDescription());
+            stmt.setString(12, ticket.getEmail());
+            stmt.setString(13, ticket.getPhone());
+
+            int result = stmt.executeUpdate();
+            if (result == 1) {
+                return Response
+                        .status(Response.Status.OK)
+                        .build();
+            }
+        }
+        catch(Exception e) {
+            log.error("Error in addTicket {}", e.getMessage());
+        }
+        finally {
+            closeAll(con, stmt, rs);
+        }
+
+        log.info("exit /addTicket");
+        return Response
+                .status(Response.Status.INTERNAL_SERVER_ERROR)
+                .build();
     }
 }

@@ -38,6 +38,17 @@ public class RestService {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("addTicket")
+    public Response login(Ticket ticket) {
+        log.info("Enter: /addTicket");
+        log.debug("Payload: {}", ticket.toString());
+        TicketDao ticketDao = new TicketDao();
+        return ticketDao.addTicket(ticket);
+    }
+
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     @Path("login")
     public Response login(Login login) {
         log.info("Enter: /login");
