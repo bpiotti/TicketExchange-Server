@@ -44,4 +44,35 @@ public class TicketDao {
         log.info("exit /getAllTickets");
         return tickets;
     }
+
+    //get array list of all tickets sorted by an event
+    public ArrayList<Ticket> getAllTicketsSort(String event) {
+        String query = "select * from ticket where sold = false and event = ? order by date DESC";
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Ticket> tickets = new ArrayList<>();
+        try {
+            con = Database.getConnection(DATABASE);
+            stmt = con.prepareStatement(query);
+            stmt.setString(1, event);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                tickets.add(new Ticket(rs.getInt("ticketid"), rs.getString("sellerfirst"),
+                        rs.getString("sellerlast"), rs.getDouble("price"), rs.getString("date"),
+                        rs.getBoolean("sold"), rs.getString("gametime"),
+                        rs.getString("buyerfirst"), rs.getString("buyerlast"),
+                        rs.getString("event"), rs.getString("description"), rs.getString("email"), rs.getString("phone")));
+            }
+
+        } catch (Exception e) {
+            log.error("Error in getAllTickets {}", e.getMessage());
+        }
+        finally {
+            closeAll(rs, stmt, con);
+        }
+        log.info("exit /getAllTickets");
+        return tickets;
+    }
 }

@@ -16,7 +16,6 @@ import com.benpiotti.cs252lab6.Entity.Ticket;
 public class RestService {
 
     private static final Logger log = LoggerFactory.getLogger(RestService.class);
-    public static final String DATABASE = "cs252lab6";
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -25,6 +24,15 @@ public class RestService {
         log.info("Enter: /getAllTickets");
         TicketDao ticketDao =  new TicketDao();
         return ticketDao.getAllTickets();
+    }
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("getAllTicketsSort")
+    public ArrayList<Ticket> getAllTicketsSort(@QueryParam("sort") String event) {
+        log.info("Enter: /getAllTicketsSort");
+        TicketDao ticketDao =  new TicketDao();
+        return ticketDao.getAllTicketsSort(event);
     }
 
     @POST
@@ -36,4 +44,5 @@ public class RestService {
         LoginDao loginDao = new LoginDao();
         return loginDao.login(login);
     }
+
 }
