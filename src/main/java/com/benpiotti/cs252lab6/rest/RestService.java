@@ -35,6 +35,15 @@ public class RestService {
         return ticketDao.getAllTicketsSort(event);
     }
 
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    @Path("getAllTicketsEmail")
+    public ArrayList<Ticket> getAllTicketsEmail(@QueryParam("email") String email) {
+        log.info("Enter: /getAllTicketsSort");
+        TicketDao ticketDao =  new TicketDao();
+        return ticketDao.getAllTicketsEmail(email);
+    }
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)

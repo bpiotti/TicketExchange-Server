@@ -69,7 +69,7 @@ public class TicketDao {
             }
 
         } catch (Exception e) {
-            log.error("Error in getAllTickets {}", e.getMessage());
+            log.error("Error in getAllTicketsSort {}", e.getMessage());
         }
         finally {
             closeAll(rs, stmt, con);
@@ -131,4 +131,36 @@ public class TicketDao {
                 .status(Response.Status.INTERNAL_SERVER_ERROR)
                 .build();
     }
+
+    //get array list of all tickets listed by a user
+    public ArrayList<Ticket> getAllTicketsEmail(String email) {
+        String query = "select * from ticket where sold = false and email = ? order by date DESC";
+        Connection con = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        ArrayList<Ticket> tickets = new ArrayList<>();
+        try {
+            con = Database.getConnection(DATABASE);
+            stmt = con.prepareStatement(query);
+            stmt.setString(1, email);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                tickets.add(new Ticket(rs.getInt("ticketid"), rs.getString("sellerfirst"),
+                        rs.getString("sellerlast"), rs.getDouble("price"), rs.getString("date"),
+                        rs.getBoolean("sold"), rs.getString("gametime"),
+                        rs.getString("buyerfirst"), rs.getString("buyerlast"),
+                        rs.getString("event"), rs.getString("description"), rs.getString("email"), rs.getString("phone")));
+            }
+
+        } catch (Exception e) {
+            log.error("Error in getAllTicketsEmail {}", e.getMessage());
+        }
+        finally {
+            closeAll(rs, stmt, con);
+        }
+        log.info("exit /getAllTicketsEmail");
+        return tickets;
+    }
+
 }
