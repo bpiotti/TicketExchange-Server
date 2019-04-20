@@ -15,7 +15,7 @@ import javax.ws.rs.core.Response;
 public class TicketDao {
 
     private static final Logger log = LoggerFactory.getLogger(TicketDao.class);
-    public static final String DATABASE = "cs252lab6";
+    public static final String DATABASE = "cs252lab6_prd";
 
     //get array list of all tickets
     public ArrayList<Ticket> getAllTickets() {

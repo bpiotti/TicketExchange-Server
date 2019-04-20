@@ -25,27 +25,27 @@
             url="jdbc:postgresql://localhost:5432/cs252lab6"
     />
 
-    <!--<Resource-->
-            <!--name="cms_prd"-->
-            <!--auth="Container"-->
-            <!--type="javax.sql.DataSource"-->
-            <!--factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"-->
-            <!--initialSize="0"-->
-            <!--maxActive="50"-->
-            <!--maxIdle="5"-->
-            <!--minIdle="0"-->
-            <!--timeBetweenEvictionRunsMillis="30000"-->
-            <!--minEvictableIdleTimeMillis="30000"-->
-            <!--removeAbandoned="true"-->
-            <!--removeAbandonedTimeout="4000"-->
-            <!--logAbandoned="true"-->
-            <!--suspectTimeout="10000"-->
-            <!--testOnBorrow="true"-->
-            <!--validationQuery="SELECT 1"-->
-            <!--username="lifex"-->
-            <!--password="lifex"-->
-            <!--driverClassName="org.postgresql.Driver"-->
-            <!--url="jdbc:postgresql://10.4.2.83:5432/chiro_test1"-->
-    <!--/>-->
+    <Resource
+            name="cs252lab6_prd"
+            auth="Container"
+            type="javax.sql.DataSource"
+            factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+            initialSize="0"
+            maxActive="50"
+            maxIdle="5"
+            minIdle="0"
+            timeBetweenEvictionRunsMillis="30000"
+            minEvictableIdleTimeMillis="30000"
+            removeAbandoned="true"
+            removeAbandonedTimeout="4000"
+            logAbandoned="true"
+            suspectTimeout="10000"
+            testOnBorrow="true"
+            validationQuery="SELECT 1"
+            username="ben"
+            password="ben"
+            driverClassName="org.postgresql.Driver"
+            url="jdbc:postgresql://10.4.2.83:5432/cs252lab6_prd"
+    />
 
 </Context>

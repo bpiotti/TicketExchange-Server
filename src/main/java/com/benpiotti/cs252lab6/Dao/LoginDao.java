@@ -15,7 +15,7 @@ import com.benpiotti.cs252lab6.util.Database;
 public class LoginDao {
 
     private static final Logger log = LoggerFactory.getLogger(LoginDao.class);
-    public static final String DATABASE = "cs252lab6";
+    public static final String DATABASE = "cs252lab6_prd";
 
     public Response login(Login login) {
         log.info("Enter login");
